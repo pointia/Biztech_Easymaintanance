@@ -1,0 +1,31 @@
+Site Maintenance,Site Maintenance
+Allow Frontend for Admin,Laat Frontend voor Admin
+Allowed IPs,toegestaan ??IP's
+Log file,log file
+Maintenance Page HTML,Onderhoud Pagina HTML
+Timer?,Timer?
+Timer text,timer tekst
+Date,datum
+Hour,uur
+Minute,minuut
+Alert Minutes,alert minuten
+Recipient Email,ontvanger E-mail
+Email Template,Email Template
+Enable,in staat stellen
+Recipient Email,ontvanger E-mail
+enable or disable Site Maintenance,stellen Site Maintenance of uitschakelen
+Frontend is allow for logged admin user,Frontend is mogelijk voor ingelogde admin gebruiker
+IPs that can access Site,IP's die toegang hebben tot Site
+Create log file to know who access while site is under maintenance mode.,Maak een log-bestand naar die toegang weten terwijl site is in onderhoud modus.
+Show this HTML content when site is under maintanance,Laat deze HTML-inhoud wanneer site is onder maintanance
+enable or disable Timer,stellen timer of uitschakelen
+Add text for timer,Voeg tekst voor timer
+Add Date for set timer,Voeg Datum voor set timer
+Add Hour in 24-hour format when you want to finish timer,Voeg Uur in 24-uurs formaat wanneer u wilt timer af
+Add Minute when you want to finish timer,Voeg Minute wanneer u wilt timer af
+Add Minute to notify when timer comes to end,Voeg Minute te waarschuwen wanneer timer komt naar einde
+Maintenance Configuration,onderhoud Vorm
+Timer Configuration,timer Configuratie
+Contact Us Configuration,Contact Configuration
+Yes,ja
+No,geen

@@ -1,0 +1,20 @@
+{
+  "name": "biztech/easymaintanance",
+  "license": "OSL-3.0",
+  "type": "magento-module",
+  "description": "Maintenance Module for Magento 1",
+  "homepage": "https://github.com/pointia/Biztech_Easymaintanance",
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  },
+  "authors":[
+    {
+      "name":"Andreas Pointner",
+      "email":"andreaspointner@gmail.com"
+    },
+    {
+      "name": "Biztech",
+      "email": "sales@biztechconsultancy.com"
+    }
+  ]
+}

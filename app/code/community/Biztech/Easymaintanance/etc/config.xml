@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+* @category   Biztech
+* @package    Biztech_Easymaintanance
+* @author     ModuleCreator
+* @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<config>
+    <modules>
+        <Biztech_Easymaintanance>
+            <version>0.1.2</version>
+        </Biztech_Easymaintanance>
+    </modules>
+    <frontend>
+        <routers>
+            <easymaintanance>
+                <use>standard</use>
+                <args>
+                    <module>Biztech_Easymaintanance</module>
+                    <frontName>easymaintanance</frontName>
+                </args>
+            </easymaintanance>
+        </routers>
+        <layout>
+            <updates>
+                <easymaintanance>
+                    <file>easymaintanance.xml</file>
+                </easymaintanance>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Biztech_Easymaintanance>
+                    <files>
+                        <default>Biztech_Easymaintanance.csv</default>
+                    </files>
+                </Biztech_Easymaintanance>
+            </modules>
+        </translate>
+    </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <easymaintanance after="Mage_Adminhtml">Biztech_Easymaintanance_Adminhtml</easymaintanance>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <easymaintanance>
+                    <file>easymaintanance.xml</file>
+                </easymaintanance>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Biztech_Easymaintanance>
+                    <files>
+                        <default>Biztech_Easymaintanance.csv</default>
+                    </files>
+                </Biztech_Easymaintanance>
+            </modules>
+        </translate>
+    </adminhtml>
+    <global>
+        <models>
+            <easymaintanance>
+                <class>Biztech_Easymaintanance_Model</class>
+                <resourceModel>easymaintanance_mysql4</resourceModel>
+            </easymaintanance>
+            <easymaintanance_mysql4>
+                <class>Biztech_Easymaintanance_Model_Mysql4</class>
+                <entities>
+                    <easymaintanance>
+                        <table>easymaintanance</table>
+                    </easymaintanance>
+                    <notification>
+                        <table>easysite_notify</table>
+                    </notification>
+                </entities>
+            </easymaintanance_mysql4>
+        </models>
+        <resources>
+            <easymaintanance_setup>
+                <setup>
+                    <module>Biztech_Easymaintanance</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </easymaintanance_setup>
+            <easymaintanance_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </easymaintanance_write>
+            <easymaintanance_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </easymaintanance_read>
+        </resources>
+        <blocks>
+            <easymaintanance>
+                <class>Biztech_Easymaintanance_Block</class>
+            </easymaintanance>
+        </blocks>
+        <helpers>
+            <easymaintanance>
+                <class>Biztech_Easymaintanance_Helper</class>
+            </easymaintanance>
+        </helpers>
+        <template>
+            <email>
+                <feedback_email_template translate="label" module="easymaintanance">
+                    <label>Feedback</label>
+                    <file>easymaintanance/contactus.html</file>
+                    <type>html</type>
+                </feedback_email_template>
+
+                <easymaintanance_general_notification_template translate="label" module="easymaintanance">
+                    <label>User Notification</label>
+                    <file>easymaintanance/notification.html</file>
+                    <type>html</type>
+                </easymaintanance_general_notification_template>
+            </email>
+
+        </template>
+        <events>
+            <controller_front_init_before>
+                <observers>
+                    <easymaintanance>
+                        <type>singleton</type>
+                        <class>easymaintanance/observer</class>
+                        <method>initControllerRouters</method>
+                    </easymaintanance>
+                </observers>
+            </controller_front_init_before>
+        </events>
+
+    </global>
+
+    <default>
+        <easymaintanance>
+            <general>
+                <allowforadmin>1</allowforadmin>
+                <logFileName>easymaintenance.log</logFileName>
+                <maintenanceHtml><![CDATA[
+<div id="header" class="clearfix">
+<div class="container">
+<h2>we are sorry , this site is down for maintenance</h2>
+</div>
+</div>]]></maintenanceHtml>
+            </general>
+            <notify>
+                <title>Notify Me</title>
+            </notify>
+        </easymaintanance>
+    </default>
+    <crontab>
+        <jobs>
+            <notify_timer_complete>
+                <schedule>
+                    <cron_expr>*/5 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>easymaintanance/observer::timeralert</model>
+                </run>
+            </notify_timer_complete>
+        </jobs>
+    </crontab>
+</config>

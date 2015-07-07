@@ -1,0 +1,31 @@
+Site Maintenance,Site Maintenance
+Allow Frontend for Admin,Allow Frontend for Admin
+Allowed IPs,Allowed IPs
+Log file,Log file
+Maintenance Page HTML,Maintenance Page HTML
+Timer?,Timer?
+Timer text,Timer text
+Date,Date
+Hour,Hour
+Minute,Minute
+Alert Minutes,Alert Minutes
+Recipient Email,Recipient Email
+Email Template,Email Template
+Enable,Enable
+Recipient Email,Recipient Email
+enable or disable Site Maintenance,enable or nobble Site Maintenance
+Frontend is allow for logged admin user,Frontend is allow for logged admin user
+IPs that can access Site,IPs that can access Site
+Create log file to know who access while site is under maintenance mode.,Create log file to know who access whilst site is under maintenance mode.
+Show this HTML content when site is under maintanance,Show this HTML content when site is under maintanance
+enable or disable Timer,enable or nobble Timer
+Add text for timer,Add text for timer
+Add Date for set timer,Add Date for set timer
+Add Hour in 24-hour format when you want to finish timer,Add Hour in 24-hour format when thou want to finish timer
+Add Minute when you want to finish timer,Add Minute when thou want to finish timer
+Add Minute to notify when timer comes to end,Add Minute to notify when timer comes to end
+Maintenance Configuration,Maintenance Configuration
+Timer Configuration,Timer Configuration
+Contact Us Configuration,Contact Us Configuration 
+Yes,Yes 
+No,No

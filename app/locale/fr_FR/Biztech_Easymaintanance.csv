@@ -1,0 +1,31 @@
+Site Maintenance,Maintenance du site
+Allow Frontend for Admin,Laisser Frontend for Admin
+Allowed IPs,IPs admis
+Log file,fichier journal
+Maintenance Page HTML,Entretien Page HTML
+Timer?,Minuterie?
+Timer text,Texte de la minuterie
+Date,Date d'
+Hour,heure
+Minute,minute
+Alert Minutes,Procés-verbal d'alerte
+Recipient Email,Email du destinataire
+Email Template,Modéle de courriel
+Enable,permettre
+Recipient Email,Email du destinataire
+enable or disable Site Maintenance,activer ou désactiver Maintenance du site
+Frontend is allow for logged admin user,Frontend est de permettre connecté utilisateur admin
+IPs that can access Site,IP qui peuvent accéder au site
+Create log file to know who access while site is under maintenance mode.,Créer un fichier log pour savoir qui l'accés tout site est en mode maintenance.
+Show this HTML content when site is under maintanance,Montrer ce contenu HTML quand le site est sous maintanance
+enable or disable Timer,activer ou désactiver la minuterie
+Add text for timer,Ajoutez le texte pour minuterie
+Add Date for set timer,Ajouter la date pour réglez la minuterie
+Add Hour in 24-hour format when you want to finish timer,Ajouter heure au format 24 heures lorsque vous voulez terminer minuterie
+Add Minute when you want to finish timer,Ajouter minute quand vous voulez terminer minuterie
+Add Minute to notify when timer comes to end,Ajouter Minute de notifier lorsque la minuterie arrive àla fin
+Maintenance Configuration,Configuration de maintenance
+Timer Configuration,Configuration de la minuterie
+Contact Us Configuration,Contactez-nous Configuration
+Yes,Oui
+No,Non

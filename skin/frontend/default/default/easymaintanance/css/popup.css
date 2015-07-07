@@ -1,0 +1,40 @@
+ .side-feedback{ border:none; left: 0px; padding: 0px; position: fixed; *position:  absolute; *left:0; top: 315px;  width: 40px; height:117px; z-index:9;}
+ .side-feedback a{ height:100%; width:100%; float:left;background:url(../images/feedbacktab.png) no-repeat -10px 0; z-index:200;}
+ .side-feedback a:hover{ height:100%; width:100%; float:left;background:url(../images/feedbacktab.png) no-repeat -6px 0; z-index:200;}
+
+ .background-opacity { background: none repeat scroll 0 0 #000000; display: none; height: 100%; left: 0; opacity: 0.7; filter:alpha(opacity=70); position: fixed; top: 0; width: 100%; z-index: 9999;}
+ .feedback-container {   -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; height: 425px; background: #fff; border: 3px solid #cccccc;   bottom: 0;   left: 0;  margin: auto;  padding: 20px 20px 5px 20px; position: absolute; right: 0; text-align: left; top: 0;width: 400px;  z-index: 9999;}
+ .feedback-container .feedback-popup-content{ overflow-y: auto; height: 410px;}
+ .feedback_close { background: url("../images/closebox.png") no-repeat scroll 0 0 transparent; height: 30px; position: absolute; right: -13px; top: -18px; width: 30px;}
+
+.feedback-title{ border-bottom: 1px solid #e8e8e8; padding-bottom: 8px; font-weight: bold;} 
+.button-feedback { overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer; height:auto; *height:40px !important; margin-top: 10px; position: relative; left: 0;}
+.button-feedback span { float:left; height:30px; background:transparent url(../images/general-btn.gif) 0 0 no-repeat; padding:0 0 0 3px; font:bold 11px/30px Arial, Helvetica, sans-serif; text-transform:uppercase; text-align:center; white-space:nowrap; color:#fff; }
+.button-feedback span span { background-position:100% 0; padding:0 30px 0 8px; }
+.feedback-content button.disabled span { border-color:#bbb !important; background:#bbb !important; }
+.feedback-content .feedback-error-msg { background-color: #FAEBE7;  ;  border-color: #F16048;  color: #DF280A; }
+.feedback-content .feedback-success-msg, .feedback-content .feedback-error-msg {
+    background-position: 10px 9px !important;
+    background-repeat: no-repeat !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    min-height: 14px !important;
+    padding: 8px 8px 8px 8px !important;
+    margin-top: 15px;
+}
+.feedback-content .feedback-success-msg { background-color: #EFF5EA !important;   border-color: #446423; color: #3D6611; }
+
+.validation-advice{ /*bottom: -16px;*/ color: red;   font-size: 12px;  padding-top: 3px; /* position: absolute;*/}
+.form-list li {   /*margin: 0 0 15px; position: relative; */ margin: 0 0 8px; position: relative; }
+
+
+
+@media (max-width: 480px) {
+
+
+.feedback-container{ width: 250px; height: 438px;}
+
+
+}

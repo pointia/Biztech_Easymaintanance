@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Biztech_Easymaintanance>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Biztech_Easymaintanance>
+    </modules>
+</config>

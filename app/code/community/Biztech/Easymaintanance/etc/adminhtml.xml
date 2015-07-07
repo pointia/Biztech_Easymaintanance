@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <system>
+            <children>
+                <easymaintanance module="easymaintanance">
+                    <title>EasyMaintenance Notifications</title>
+                    <sort_order>71</sort_order>
+                    <action>adminhtml/easymaintanance_notification/index</action>
+                </easymaintanance>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <easymaintanance translate="title" module="easymaintanance">
+                                <title>Easymaintenance Notifications</title>
+                            </easymaintanance>
+                            <config>
+                                <children>
+                                    <easymaintanance translate="title" module="easymaintanance">
+                                        <title>Easymaintenance</title>
+                                    </easymaintanance>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
