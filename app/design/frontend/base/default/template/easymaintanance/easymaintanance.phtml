@@ -1,14 +1,16 @@
-<?php /* ?>
-    <script language="javascript" type="text/javascript">setTimeout("location.reload();",20000);</script>
-<?php */ ?>
+<?php
+    $storeId = Mage::app()->getStore()->getStoreId();
+    $logo = Mage::getStoreConfig('easymaintanance/general/logo', $storeId);
+    $pageTitle = Mage::getStoreConfig('easymaintanance/general/page_title',$storeId);
+?>
 <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl("easymaintanance/css/easymaintanance.css") ?>">
 <link rel="icon" href="<?php echo $this->getSkinUrl('favicon.ico'); ?>" type="image/x-icon" />
-<?php $storeId = Mage::app()->getStore()->getStoreId(); ?>
+<?php  ?>
 <html>      
     <title>
         <?php 
-            if(Mage::getStoreConfig('easymaintanance/general/page_title',$storeId) != ''){
-                echo strip_tags(Mage::getStoreConfig('easymaintanance/general/page_title',$storeId),NULL);
+            if($pageTitle != ''){
+                echo strip_tags($pageTitle, NULL);
             }
             else{
                 echo $this->__('Store Maintenance');
@@ -16,9 +18,11 @@
         ?>  
     </title>
     <div class="main-container">
-        <div>
-            <img height="80px" width="80px" src="<?php echo Mage::getBaseUrl('media').'easysitemaintenance/'. Mage::getStoreConfig('easymaintanance/general/logo'); ?>" alt="Easysitemaintenance Logo">
-        </div>
+        <?php if ($logo): ?>
+            <div>
+                <img height="80px" width="80px" src="<?php echo Mage::getBaseUrl('media').'easysitemaintenance/'. Mage::getStoreConfig('easymaintanance/general/logo'); ?>" alt="Easysitemaintenance Logo">
+            </div>
+        <?php endif; ?>
         <?php 
             $date =  Mage::getStoreConfig('easymaintanance/timer/timer_date',$storeId);
             $formatedDate = date('m/d/Y',strtotime($date));
@@ -36,10 +40,7 @@
             $maintenancePage = $processor->filter(trim(Mage::getStoreConfig('easymaintanance/general/maintenanceHtml',$storeId)));
             // $maintenancePage = trim(Mage::getStoreConfig('easymaintanance/general/maintenanceHtml',$storeId));
             echo $maintenancePage;
-        ?>    
-
-
-
+        ?>
         <?php
             $bg_image =  Mage::getStoreConfig('easymaintanance/general/background_image',$storeId);
             if(isset($bg_image) && $bg_image != null )
@@ -52,8 +53,6 @@
                 <?php $text = Mage::getStoreConfig('easymaintanance/timer/timer_text',$storeId); ?>
                 <h2 id="launch-text"><?php echo $text; ?></h2>
             </div>
-
-
             <script type="text/javascript">
 
                 var current="Time is over!";    
@@ -110,8 +109,6 @@
 
                 }
             </script>
-
-
             <body onLoad="countdown(year,month,day,hour,minute)" <?php if(isset($image_path)){ ?>style="background-image: url(<?php echo $image_path ?>); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
 src='<?php echo $image_path ?>', sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $image_path ?>',sizingMethod='scale'); " <?php } ?>>
                 <div class="countdown" >
@@ -127,7 +124,6 @@ src='<?php echo $image_path ?>', sizingMethod='scale'); -ms-filter: "progid:DXIm
             <?php else: ?>  
             <body  <?php if(isset($image_path)){ ?>style="background-image: url(<?php echo $image_path ?>);  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
 src='<?php echo $image_path ?>', sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $image_path ?>',sizingMethod='scale') ;" <?php } ?>>
-
         </body>
         <?php endif; ?>    
         <?php if (Mage::getStoreConfig('easymaintanance/contactus/active', $storeId) == 1 || Mage::getStoreConfig('easymaintanance/notify/active', $storeId) == 1 ): ?>
@@ -142,9 +138,6 @@ src='<?php echo $image_path ?>', sizingMethod='scale'); -ms-filter: "progid:DXIm
             <?php endif; ?>  
             <?php if (Mage::getStoreConfig('easymaintanance/notify/active', $storeId)): ?>
                 <?php echo Mage::getSingleton('core/layout')->createBlock('core/template')->setTemplate('easymaintanance/notify.phtml')->toHtml(); ?>
-            <?php endif; ?>          
-
+            <?php endif; ?>
     </div>
-
-
 </html>
